@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="auth-card active" id="loginCard">
+            <div class="card-header">
+                <h1>Welcome Back</h1>
+                <p>Please login to continue</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" required>
+                    <label>Email Address</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" required>
+                    <label>Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p class="switch-text">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+
+        <!-- Register Form -->
+        <div class="auth-card" id="registerCard">
+            <div class="card-header">
+                <h1>Create Account</h1>
+                <p>Join our community</p>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" id="registerName" required>
+                    <label>Full Name</label>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="registerEmail" required>
+                    <label>Email Address</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="registerPassword" required>
+                    <label>Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <p class="switch-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+
+        <!-- User Dashboard -->
+        <div class="dashboard-card" id="dashboard">
+            <div class="card-header">
+                <h1>Welcome, <span id="userName"></span></h1>
+                <p>What would you like to do today?</p>
+            </div>
+            <div class="dashboard-menu">
+                <button class="menu-item" id="viewProfile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>View Profile</span>
+                </button>
+                <button class="menu-item" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+            <div class="profile-info" id="profileInfo"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
